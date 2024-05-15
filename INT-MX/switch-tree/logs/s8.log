@@ -1,0 +1,28 @@
+Calling target program-options parser
+[07:14:19.285] [bmv2] [D] [thread 5074] Set default default entry for table 'MyIngress.ipv4_lpm': NoAction - 
+[07:14:19.286] [bmv2] [D] [thread 5074] Set default default entry for table 'tbl_activate_INT': MyIngress.activate_INT - 
+[07:14:19.286] [bmv2] [D] [thread 5074] Set default default entry for table 'MyIngress.INT_tab': NoAction - 
+[07:14:19.286] [bmv2] [D] [thread 5074] Set default default entry for table 'MyIngress.sink_config': NoAction - 
+[07:14:19.286] [bmv2] [D] [thread 5074] Set default default entry for table 'tbl_int285': int285 - 
+[07:14:19.287] [bmv2] [D] [thread 5074] Set default default entry for table 'tbl_remove_sink_header': MyEgress.remove_sink_header - 
+[07:14:19.287] [bmv2] [D] [thread 5074] Set default default entry for table 'MyEgress.direct_report': NoAction - 
+[07:14:19.287] [bmv2] [D] [thread 5074] Set default default entry for table 'tbl_int343': int343 - 
+Adding interface s8-eth1 as port 1
+[07:14:19.289] [bmv2] [D] [thread 5074] Adding interface s8-eth1 as port 1
+Adding interface s8-eth2 as port 2
+[07:14:19.346] [bmv2] [D] [thread 5074] Adding interface s8-eth2 as port 2
+Adding interface s8-eth3 as port 3
+[07:14:19.382] [bmv2] [D] [thread 5074] Adding interface s8-eth3 as port 3
+Adding interface s8-eth4 as port 4
+[07:14:19.430] [bmv2] [D] [thread 5074] Adding interface s8-eth4 as port 4
+Adding interface s8-eth5 as port 5
+[07:14:19.488] [bmv2] [D] [thread 5074] Adding interface s8-eth5 as port 5
+Adding interface s8-eth6 as port 6
+[07:14:19.534] [bmv2] [D] [thread 5074] Adding interface s8-eth6 as port 6
+Adding interface s8-eth7 as port 7
+[07:14:19.579] [bmv2] [D] [thread 5074] Adding interface s8-eth7 as port 7
+Adding interface s8-eth8 as port 8
+[07:14:19.623] [bmv2] [D] [thread 5074] Adding interface s8-eth8 as port 8
+Server listening on 0.0.0.0:50058
+[07:14:19.707] [bmv2] [I] [thread 5074] Starting Thrift server on port 9097
+[07:14:19.708] [bmv2] [I] [thread 5074] Thrift server was started

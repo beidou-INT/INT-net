@@ -1,0 +1,136 @@
+sniffing on eth0
+got a packet
+###[ Ethernet ]### 
+  dst       = 08:00:00:00:03:03
+  src       = 08:00:00:00:03:00
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 32
+     id        = 49210
+     flags     = DF
+     frag      = 0
+     ttl       = 61
+     proto     = udp
+     chksum    = 0x658f
+     src       = 10.0.1.2
+     dst       = 10.0.3.2
+     \options   \
+###[ UDP ]### 
+        sport     = 35296
+        dport     = 4321
+        len       = 12
+        chksum    = 0xead5
+###[ Raw ]### 
+           load      = '111\n'
+
+got a packet
+###[ Ethernet ]### 
+  dst       = 08:00:00:00:03:03
+  src       = 08:00:00:00:03:00
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 32
+     id        = 50852
+     flags     = DF
+     frag      = 0
+     ttl       = 61
+     proto     = udp
+     chksum    = 0x5f25
+     src       = 10.0.1.2
+     dst       = 10.0.3.2
+     \options   \
+###[ UDP ]### 
+        sport     = 46687
+        dport     = 4321
+        len       = 12
+        chksum    = 0xbe56
+###[ Raw ]### 
+           load      = '111\n'
+
+got a packet
+###[ Ethernet ]### 
+  dst       = 08:00:00:00:03:03
+  src       = 08:00:00:00:03:00
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 32
+     id        = 6174
+     flags     = DF
+     frag      = 0
+     ttl       = 61
+     proto     = udp
+     chksum    = 0xdac
+     src       = 10.0.1.2
+     dst       = 10.0.3.2
+     \options   \
+###[ UDP ]### 
+        sport     = 35147
+        dport     = 4321
+        len       = 12
+        chksum    = 0xeb6a
+###[ Raw ]### 
+           load      = '111\n'
+
+got a packet
+###[ Ethernet ]### 
+  dst       = 08:00:00:00:03:03
+  src       = 08:00:00:00:03:00
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 32
+     id        = 19409
+     flags     = DF
+     frag      = 0
+     ttl       = 61
+     proto     = udp
+     chksum    = 0xd9f8
+     src       = 10.0.1.2
+     dst       = 10.0.3.2
+     \options   \
+###[ UDP ]### 
+        sport     = 59889
+        dport     = 4321
+        len       = 12
+        chksum    = 0x8ac4
+###[ Raw ]### 
+           load      = '111\n'
+
+got a packet
+###[ Ethernet ]### 
+  dst       = 08:00:00:00:03:03
+  src       = 08:00:00:00:03:00
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 32
+     id        = 30224
+     flags     = DF
+     frag      = 0
+     ttl       = 61
+     proto     = udp
+     chksum    = 0xafb9
+     src       = 10.0.1.2
+     dst       = 10.0.3.2
+     \options   \
+###[ UDP ]### 
+        sport     = 43519
+        dport     = 4321
+        len       = 12
+        chksum    = 0xcab6
+###[ Raw ]### 
+           load      = '111\n'
+
