@@ -65,13 +65,13 @@ header INT_header_t {
 
 header INT_report_header_t {
     bit<8>      swid;
-    bit<8>      dataType; // 0 UDP 1 TCP
+    bit<8>      dataType;
     bit<16>     traceid;
     bit<16>     dataSize;
     bit<32>     dataSrc;
     bit<32>     dataDst;
     bit<48>     timestamp;
-    bit<16>     undefined;
+    bit<16>     duration;
 }
 
 struct metadata {
@@ -83,13 +83,17 @@ struct metadata {
     @field_list(1,2,3)
     bit<48>     timestamp;
     @field_list(1,2,3,4)
-    bit<8>      dataType; // 0 UDP 1 TCP
+    bit<8>      dataType;
     @field_list(1,2,3,4,5)
     bit<16>     dataSize;
     @field_list(1,2,3,4,5,6)
     bit<32>     dataSrc;
     @field_list(1,2,3,4,5,6,7)
     bit<32>     dataDst;
+    @field_list(1,2,3,4,5,6,7,8)
+    bit<48>     timestamp;
+    @field_list(1,2,3,4,5,6,7,8,9)
+    bit<16>     duration;
 }
 
 struct headers {
@@ -203,7 +207,6 @@ control MyIngress(inout headers hdr,
     }
 
     action add_INT(bit<8> swid) {
-        // TODO
         hdr.int_header.remaining_hop_cnt = hdr.int_header.remaining_hop_cnt - 1;
 
         meta.swid = swid;
@@ -301,8 +304,8 @@ control MyEgress(inout headers hdr,
                  inout standard_metadata_t standard_metadata) {
     
     action remove_sink_header() {
-        hdr.ipv4.ihl = hdr.ipv4.ihl - 1;
-        hdr.ipv4.totalLen = hdr.ipv4.totalLen - 4;
+        hdr.ipv4.ihl = hdr.ipv4.ihl - 2;
+        hdr.ipv4.totalLen = hdr.ipv4.totalLen - 8;
 
         // remove INT data added in INT sink
         hdr.int_header.setInvalid();
@@ -356,6 +359,7 @@ control MyEgress(inout headers hdr,
             hdr.int_report_header.dataSize = meta.dataSize;
             hdr.int_report_header.dataSrc = meta.dataSrc;
             hdr.int_report_header.dataDst = meta.dataDst;
+            hdr.int_report_header.duration =  (bit<16>)(standard_metadata.egress_global_timestamp - meta.timestamp);
 
             // totallen只算固定首部+option长度 20+24
             hdr.ipv4.protocol = 4;// IPv4

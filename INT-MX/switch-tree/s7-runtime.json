@@ -74,14 +74,6 @@
         "collectorAddr": "10.0.8.2",
         "dstAddr": "08:00:00:00:08:00"
       }
-    },
-    {
-      "table": "MyIngress.sink_config",
-      "match": {
-        "standard_metadata.egress_spec": 1
-      },
-      "action_name": "MyIngress.set_sink",
-      "action_params": {}
     }
   ]
 }

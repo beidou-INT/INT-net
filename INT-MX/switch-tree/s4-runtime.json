@@ -96,6 +96,14 @@
       },
       "action_name": "MyIngress.set_sink",
       "action_params": {}
+    },
+    {
+      "table": "MyIngress.sink_config",
+      "match": {
+        "standard_metadata.egress_spec": 2
+      },
+      "action_name": "MyIngress.set_sink",
+      "action_params": {}
     }
   ]
 }
