@@ -91,7 +91,10 @@ class ExerciseTopo(Topo):
             else:
                 # add default switch
                 switchClass = None
-            self.addSwitch(sw, log_file="%s/%s.log" %(log_dir, sw), cls=switchClass)
+            if "cpu_port" in params:
+                self.addSwitch(sw, log_file="%s/%s.log" %(log_dir, sw), cpu_port=params["cpu_port"], cls=switchClass)
+            else:
+                self.addSwitch(sw, log_file="%s/%s.log" %(log_dir, sw), cls=switchClass)
 
         for link in host_links:
             host_name = link['node1']
@@ -278,7 +281,6 @@ class ExerciseRunner:
                 proto_dump_fpath=outfile,
                 runtime_json=runtime_json
             )
-            
 
     def program_switch_cli(self, sw_name, sw_dict):
         """ This method will start up the CLI and use the contents of the
@@ -303,6 +305,9 @@ class ExerciseRunner:
             provided for the switches.
         """
         for sw_name, sw_dict in self.switches.items():
+            if 'cli_input' not in sw_dict and 'runtime_json' not in sw_dict:
+                self.logger('Warning: No control plane file provided for switch %s.' % sw_name)
+                continue
             if 'cli_input' in sw_dict:
                 self.program_switch_cli(sw_name, sw_dict)
             if 'runtime_json' in sw_dict:
@@ -386,4 +391,3 @@ if __name__ == '__main__':
                               args.switch_json, args.behavioral_exe, args.quiet)
 
     exercise.run_exercise()
-

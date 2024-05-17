@@ -25,7 +25,7 @@ def get_if():
     for i in get_if_list():
         if "eth0" in i:
             iface=i
-            break;
+            break
     if not iface:
         print("Cannot find eth0 interface")
         exit(1)
@@ -54,7 +54,7 @@ class IPOption_INT(IPOption):
                     IPField("dataSrc", 0),
                     IPField("dataDst", 0),
                     TimeField("timestamp", 1704194795000, 48),
-                    BitField("undefined", 0, 16)]
+                    BitField("duration", 0, 16)]
 
 def main():
     iface = 'eth0'

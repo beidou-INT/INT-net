@@ -83,6 +83,7 @@
     },
     {
       "table": "MyEgress.direct_report",
+      "default_action": true,
       "action_name": "MyEgress.change_report_header",
       "action_params": {
         "collectorAddr": "10.0.8.2",

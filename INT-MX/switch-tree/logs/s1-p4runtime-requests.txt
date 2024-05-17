@@ -1,10 +1,10 @@
 
-[2024-02-24 07:14:21.108] /p4.v1.P4Runtime/SetForwardingPipelineConfig
+[2024-05-16 14:45:20.942] /p4.v1.P4Runtime/SetForwardingPipelineConfig
 ---
-Message too long (76951 bytes)! Skipping log...
+Message too long (79320 bytes)! Skipping log...
 ---
 
-[2024-02-24 07:14:21.123] /p4.v1.P4Runtime/Write
+[2024-05-16 14:45:20.947] /p4.v1.P4Runtime/Write
 ---
 election_id {
   low: 1
@@ -29,7 +29,7 @@ updates {
 }
 ---
 
-[2024-02-24 07:14:21.126] /p4.v1.P4Runtime/Write
+[2024-05-16 14:45:20.948] /p4.v1.P4Runtime/Write
 ---
 election_id {
   low: 1
@@ -64,7 +64,7 @@ updates {
 }
 ---
 
-[2024-02-24 07:14:21.128] /p4.v1.P4Runtime/Write
+[2024-05-16 14:45:20.948] /p4.v1.P4Runtime/Write
 ---
 election_id {
   low: 1
@@ -99,7 +99,7 @@ updates {
 }
 ---
 
-[2024-02-24 07:14:21.131] /p4.v1.P4Runtime/Write
+[2024-05-16 14:45:20.949] /p4.v1.P4Runtime/Write
 ---
 election_id {
   low: 1
@@ -134,7 +134,7 @@ updates {
 }
 ---
 
-[2024-02-24 07:14:21.151] /p4.v1.P4Runtime/Write
+[2024-05-16 14:45:20.950] /p4.v1.P4Runtime/Write
 ---
 election_id {
   low: 1
@@ -169,7 +169,7 @@ updates {
 }
 ---
 
-[2024-02-24 07:14:21.155] /p4.v1.P4Runtime/Write
+[2024-05-16 14:45:20.951] /p4.v1.P4Runtime/Write
 ---
 election_id {
   low: 1
@@ -204,13 +204,13 @@ updates {
 }
 ---
 
-[2024-02-24 07:14:21.162] /p4.v1.P4Runtime/Write
+[2024-05-16 14:45:20.952] /p4.v1.P4Runtime/Write
 ---
 election_id {
   low: 1
 }
 updates {
-  type: INSERT
+  type: MODIFY
   entity {
     table_entry {
       table_id: 34913483
@@ -225,6 +225,59 @@ updates {
             param_id: 2
             value: "\010\000\000\000\010\000"
           }
+        }
+      }
+      is_default_action: true
+    }
+  }
+}
+---
+
+[2024-05-16 14:45:20.952] /p4.v1.P4Runtime/Write
+---
+election_id {
+  low: 1
+}
+updates {
+  type: INSERT
+  entity {
+    table_entry {
+      table_id: 50211737
+      match {
+        field_id: 1
+        exact {
+          value: "\000\001"
+        }
+      }
+      action {
+        action {
+          action_id: 19269237
+        }
+      }
+    }
+  }
+}
+---
+
+[2024-05-16 14:45:20.953] /p4.v1.P4Runtime/Write
+---
+election_id {
+  low: 1
+}
+updates {
+  type: INSERT
+  entity {
+    table_entry {
+      table_id: 50211737
+      match {
+        field_id: 1
+        exact {
+          value: "\000\002"
+        }
+      }
+      action {
+        action {
+          action_id: 19269237
         }
       }
     }

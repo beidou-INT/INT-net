@@ -100,7 +100,7 @@
         ["dataSrc", 32, false],
         ["dataDst", 32, false],
         ["timestamp", 48, false],
-        ["undefined", 16, false]
+        ["duration", 16, false]
       ]
     }
   ],
@@ -524,7 +524,7 @@
       "id" : 0,
       "source_info" : {
         "filename" : "int.p4",
-        "line" : 399,
+        "line" : 400,
         "column" : 8,
         "source_fragment" : "MyDeparser"
       },
@@ -564,7 +564,7 @@
       "id" : 1,
       "source_info" : {
         "filename" : "int.p4",
-        "line" : 377,
+        "line" : 378,
         "column" : 8,
         "source_fragment" : "update_checksum( ..."
       },
@@ -652,7 +652,7 @@
           ],
           "source_info" : {
             "filename" : "int.p4",
-            "line" : 170,
+            "line" : 171,
             "column" : 8,
             "source_fragment" : "mark_to_drop(standard_metadata)"
           }
@@ -674,7 +674,7 @@
           ],
           "source_info" : {
             "filename" : "int.p4",
-            "line" : 170,
+            "line" : 171,
             "column" : 8,
             "source_fragment" : "mark_to_drop(standard_metadata)"
           }
@@ -709,7 +709,7 @@
           ],
           "source_info" : {
             "filename" : "int.p4",
-            "line" : 174,
+            "line" : 175,
             "column" : 8,
             "source_fragment" : "standard_metadata.egress_spec = port"
           }
@@ -728,7 +728,7 @@
           ],
           "source_info" : {
             "filename" : "int.p4",
-            "line" : 175,
+            "line" : 176,
             "column" : 8,
             "source_fragment" : "hdr.ethernet.srcAddr = hdr.ethernet.dstAddr"
           }
@@ -747,7 +747,7 @@
           ],
           "source_info" : {
             "filename" : "int.p4",
-            "line" : 176,
+            "line" : 177,
             "column" : 8,
             "source_fragment" : "hdr.ethernet.dstAddr = dstAddr"
           }
@@ -789,7 +789,7 @@
           ],
           "source_info" : {
             "filename" : "int.p4",
-            "line" : 177,
+            "line" : 178,
             "column" : 8,
             "source_fragment" : "hdr.ipv4.ttl = hdr.ipv4.ttl - 1"
           }
@@ -811,7 +811,7 @@
           ],
           "source_info" : {
             "filename" : "int.p4",
-            "line" : 181,
+            "line" : 182,
             "column" : 8,
             "source_fragment" : "hdr.ipv4_option.setValid()"
           }
@@ -826,7 +826,7 @@
           ],
           "source_info" : {
             "filename" : "int.p4",
-            "line" : 182,
+            "line" : 183,
             "column" : 8,
             "source_fragment" : "hdr.int_header.setValid()"
           }
@@ -845,7 +845,7 @@
           ],
           "source_info" : {
             "filename" : "int.p4",
-            "line" : 184,
+            "line" : 185,
             "column" : 8,
             "source_fragment" : "hdr.ipv4_option.option = 31"
           }
@@ -864,7 +864,7 @@
           ],
           "source_info" : {
             "filename" : "int.p4",
-            "line" : 185,
+            "line" : 186,
             "column" : 8,
             "source_fragment" : "hdr.ipv4_option.copyFlag = 0"
           }
@@ -883,7 +883,7 @@
           ],
           "source_info" : {
             "filename" : "int.p4",
-            "line" : 186,
+            "line" : 187,
             "column" : 8,
             "source_fragment" : "hdr.ipv4_option.optClass = 0"
           }
@@ -902,7 +902,7 @@
           ],
           "source_info" : {
             "filename" : "int.p4",
-            "line" : 187,
+            "line" : 188,
             "column" : 8,
             "source_fragment" : "hdr.ipv4_option.optionLength = 4"
           }
@@ -921,7 +921,7 @@
           ],
           "source_info" : {
             "filename" : "int.p4",
-            "line" : 189,
+            "line" : 190,
             "column" : 8,
             "source_fragment" : "hdr.int_header.remaining_hop_cnt = 20"
           }
@@ -940,7 +940,7 @@
           ],
           "source_info" : {
             "filename" : "int.p4",
-            "line" : 190,
+            "line" : 191,
             "column" : 8,
             "source_fragment" : "hdr.int_header.sink = 0"
           }
@@ -959,7 +959,7 @@
           ],
           "source_info" : {
             "filename" : "int.p4",
-            "line" : 194,
+            "line" : 195,
             "column" : 13,
             "source_fragment" : "standard_metadata.ingress_global_timestamp"
           }
@@ -978,7 +978,7 @@
           ],
           "source_info" : {
             "filename" : "int.p4",
-            "line" : 195,
+            "line" : 196,
             "column" : 12,
             "source_fragment" : "hdr.ipv4.srcAddr"
           }
@@ -997,7 +997,7 @@
           ],
           "source_info" : {
             "filename" : "int.p4",
-            "line" : 196,
+            "line" : 197,
             "column" : 12,
             "source_fragment" : "hdr.ipv4.dstAddr"
           }
@@ -1016,7 +1016,7 @@
           ],
           "source_info" : {
             "filename" : "int.p4",
-            "line" : 197,
+            "line" : 198,
             "column" : 12,
             "source_fragment" : "hdr.ipv4.protocol"
           }
@@ -1043,7 +1043,7 @@
           ],
           "source_info" : {
             "filename" : "int.p4",
-            "line" : 192,
+            "line" : 193,
             "column" : 8,
             "source_fragment" : "hash(hdr.int_header.traceid, ..."
           }
@@ -1085,7 +1085,7 @@
           ],
           "source_info" : {
             "filename" : "int.p4",
-            "line" : 201,
+            "line" : 202,
             "column" : 8,
             "source_fragment" : "hdr.ipv4.ihl = hdr.ipv4.ihl + 2"
           }
@@ -1127,7 +1127,7 @@
           ],
           "source_info" : {
             "filename" : "int.p4",
-            "line" : 202,
+            "line" : 203,
             "column" : 8,
             "source_fragment" : "hdr.ipv4.totalLen = hdr.ipv4.totalLen + 8"
           }
@@ -1407,7 +1407,7 @@
                       },
                       "right" : {
                         "type" : "hexstr",
-                        "value" : "0x0f"
+                        "value" : "0x0e"
                       }
                     }
                   },
@@ -1423,7 +1423,7 @@
             "filename" : "int.p4",
             "line" : 304,
             "column" : 8,
-            "source_fragment" : "hdr.ipv4.ihl = hdr.ipv4.ihl - 1"
+            "source_fragment" : "hdr.ipv4.ihl = hdr.ipv4.ihl - 2"
           }
         },
         {
@@ -1449,7 +1449,7 @@
                       },
                       "right" : {
                         "type" : "hexstr",
-                        "value" : "0xfffc"
+                        "value" : "0xfff8"
                       }
                     }
                   },
@@ -1465,7 +1465,7 @@
             "filename" : "int.p4",
             "line" : 305,
             "column" : 8,
-            "source_fragment" : "hdr.ipv4.totalLen = hdr.ipv4.totalLen - 4"
+            "source_fragment" : "hdr.ipv4.totalLen = hdr.ipv4.totalLen - 8"
           }
         },
         {
@@ -1833,6 +1833,68 @@
           "parameters" : [
             {
               "type" : "field",
+              "value" : ["int_report_header", "duration"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "&",
+                      "left" : {
+                        "type" : "expression",
+                        "value" : {
+                          "op" : "&",
+                          "left" : {
+                            "type" : "expression",
+                            "value" : {
+                              "op" : "-",
+                              "left" : {
+                                "type" : "field",
+                                "value" : ["standard_metadata", "egress_global_timestamp"]
+                              },
+                              "right" : {
+                                "type" : "field",
+                                "value" : ["scalars", "metadata.timestamp"]
+                              }
+                            }
+                          },
+                          "right" : {
+                            "type" : "hexstr",
+                            "value" : "0xffffffffffff"
+                          }
+                        }
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x00000000ffff"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "int.p4",
+            "line" : 359,
+            "column" : 12,
+            "source_fragment" : "hdr.int_report_header.duration = (bit<16>)(standard_metadata.egress_global_timestamp - meta.timestamp)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
               "value" : ["ipv4", "protocol"]
             },
             {
@@ -1842,7 +1904,7 @@
           ],
           "source_info" : {
             "filename" : "int.p4",
-            "line" : 361,
+            "line" : 362,
             "column" : 12,
             "source_fragment" : "hdr.ipv4.protocol = 4"
           }
@@ -1861,7 +1923,7 @@
           ],
           "source_info" : {
             "filename" : "int.p4",
-            "line" : 362,
+            "line" : 363,
             "column" : 12,
             "source_fragment" : "hdr.ipv4.totalLen = (bit<16>)(20 + 24"
           }
@@ -1880,7 +1942,7 @@
           ],
           "source_info" : {
             "filename" : "int.p4",
-            "line" : 364,
+            "line" : 365,
             "column" : 12,
             "source_fragment" : "hdr.ipv4.ihl = 11"
           }
@@ -1895,7 +1957,7 @@
           ],
           "source_info" : {
             "filename" : "int.p4",
-            "line" : 366,
+            "line" : 367,
             "column" : 12,
             "source_fragment" : "truncate((bit<32>)hdr.ipv4.totalLen + 14)"
           }
@@ -1909,7 +1971,7 @@
       "id" : 0,
       "source_info" : {
         "filename" : "int.p4",
-        "line" : 166,
+        "line" : 167,
         "column" : 8,
         "source_fragment" : "MyIngress"
       },
@@ -2477,7 +2539,7 @@
       "id" : 0,
       "source_info" : {
         "filename" : "int.p4",
-        "line" : 377,
+        "line" : 378,
         "column" : 8,
         "source_fragment" : "update_checksum( ..."
       },

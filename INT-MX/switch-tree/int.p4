@@ -90,10 +90,7 @@ struct metadata {
     bit<32>     dataSrc;
     @field_list(1,2,3,4,5,6,7)
     bit<32>     dataDst;
-    @field_list(1,2,3,4,5,6,7,8)
-    bit<48>     timestamp;
-    @field_list(1,2,3,4,5,6,7,8,9)
-    bit<16>     duration;
+
 }
 
 struct headers {
