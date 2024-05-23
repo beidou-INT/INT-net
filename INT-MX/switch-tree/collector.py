@@ -13,6 +13,7 @@ from scapy.all import (
     IPField,
     BitField,
     hexdump,
+    hexstr,
     get_if_list,
     sniff
 )
@@ -33,12 +34,13 @@ def get_if():
 
 
 def handle_pkt(pkt):
-    print("==================================================")
     ip_options = pkt[IP].options
     if ip_options:
         hexdump(pkt)
+        print('----------------------------------------------------------')
         print(ip_options)
-    
+        print("==================================================")
+
     sys.stdout.flush()
 
 
@@ -53,12 +55,12 @@ class IPOption_INT(IPOption):
                     BitField("dataSize", 0, 16),
                     IPField("dataSrc", 0),
                     IPField("dataDst", 0),
-                    TimeField("timestamp", 1704194795000, 48),
+                    BitField("timestamp", 1704194795000, 48),
                     BitField("duration", 0, 16)]
 
 def main():
     iface = 'eth0'
-    print("sniffing on %s" % iface)
+    # print("sniffing on %s" % iface)
     sys.stdout.flush()
     sniff(filter="ip", iface = iface,
           prn = lambda x: handle_pkt(x))
