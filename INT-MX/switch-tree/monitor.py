@@ -1,5 +1,6 @@
 import json
 import re
+import sys
 import time
 import os
 from watchdog.observers import Observer
@@ -64,7 +65,6 @@ class TailFileHandler(FileSystemEventHandler):
 
     def upload(self, pkts):
         url = 'http://192.168.31.80:10615/package/addINTPackages'
-        print(json.dumps(pkts))
         response  = requests.post(
             url, 
             data=json.dumps(pkts), 
@@ -75,6 +75,7 @@ class TailFileHandler(FileSystemEventHandler):
             print("上传成功")
         else:
             print(f"请求失败，状态码：{response.status_code}, 信息为: {response.text}")
+        sys.stdout.flush()
 
 if __name__ == "__main__":
     path_to_watch = './collect.log'  # 替换为你要监控的文本文件的完整路径

@@ -66,7 +66,7 @@ def main():
     pkt.show2()
     #hexdump(pkt)
     try:
-      for i in range(int(sys.argv[2])):
+      for i in range(int(sys.argv[3])):
         sendp(pkt, iface=iface)
         sleep(1)
     except KeyboardInterrupt:
